@@ -27,3 +27,10 @@ It was giving me a problem... when it was fixed it looked like this
 ```js
 console.log("goodbye")
 ```
+
+### Example Table
+
+| Column1 | Column2 |
+|---------|---------|
+| Thing1  | Thing2  |
+| yada1   | yada2   |
