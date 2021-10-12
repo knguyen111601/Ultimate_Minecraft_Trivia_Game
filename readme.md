@@ -34,3 +34,7 @@ console.log("goodbye")
 |---------|---------|
 | Thing1  | Thing2  |
 | yada1   | yada2   |
+
+## Media Queries
+
+For my mobile design, I went for a more vertical design with the entire site. Each section: Header, Question, Answers, and Scores, were stacked on top of each other in the mobile version to avoid squishing of words. Each question was one on top of the other as opposed to the 2x2 design for a desktop site. I made the widths of all the blocks appear to be the same as well so it appears to be more streamline. 
