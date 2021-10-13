@@ -110,7 +110,6 @@ const url = "https://cdn.contentful.com/spaces/ttpo79qriuq4/environments/master/
             console.log(data)
             console.log(questions)
             setBoard(questions);
-            endgame();
         })    
 
 //////////////////////////////////////////////////////////////////////
@@ -127,6 +126,7 @@ $(".chars").on("click", (event)=>{
     $(".play").on("click", ()=>{
         $("#player1").append(characters[0]);
         $("#player2").append(characters[1]);
+        $(".chars").css("border", "none")
         $("#charSelect").remove();
     })
 })
