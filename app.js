@@ -65,7 +65,7 @@ const setBoard = (q) => {
     // Remove the question to avoid repeats and end the game
     q.splice(randomIndex, 1);
     console.log(q)
-    if (state.player1 === 10 || state.player2 === 10) {
+    if (q.length === 0) {
         $("#end").css("visibility", "unset")
         if (state.player1 > state.player2) {
             $("#end").append($("<h1>")).text("Player 1 Wins!").addClass("endText")

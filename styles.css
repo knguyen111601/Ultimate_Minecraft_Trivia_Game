@@ -164,7 +164,7 @@ body h1 {
 ************************************************************** */
 
 #charSelect {
-    background-color: rgb(177, 40, 40);
+    background-color: firebrick;
     position: fixed;
     top: 0%;
     left: 0%;
@@ -189,15 +189,16 @@ body h1 {
 }
 
 .choose {
-    font-size: 2em;
+    font-size: 3em;
     position: absolute;
-    top: -13%;
+    top: -5%;
+    line-height: 60px;
 }
 
 .whoChoose {
     font-size: 2em;
     position: absolute;
-    top: 15%;
+    top: 20%;
 }
 
 .play {
@@ -216,6 +217,8 @@ body h1 {
     .choose {
         position: absolute;
         top: 0%;
+        font-size: 1.5em;
+        line-height: 35px;
     }
     .whoChoose {
         position: absolute;
@@ -330,6 +333,35 @@ body h1 {
     visibility: hidden;
 }
 
+.abil:hover {
+        transition: transform 0.2s;
+        transform: scale(1.2);
+}
+
+.abil2:hover {
+    transition: transform 0.2s;
+    transform: scale(1.2);
+}
+
+.zombAbil:hover {
+    transition: transform 0.2s;
+    transform: scale(1.2);
+}
+
+.zombAbil2:hover {
+    transition: transform 0.2s;
+    transform: scale(1.2);
+}
+
+.enderAbil:hover {
+    transition: transform 0.2s;
+    transform: scale(1.2);
+}
+
+.enderAbil2:hover {
+    transition: transform 0.2s;
+    transform: scale(1.2);
+}
 
 @media screen and (max-width: 768px){
     .abil {
