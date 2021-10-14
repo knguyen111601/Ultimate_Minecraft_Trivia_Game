@@ -4,7 +4,7 @@
 let characters = []
 const state = {
     player1Char: characters[0],
-    player2Char: characters[1],
+    player2Char: characters[2],
     player1: 0,
     player2: 0,
     which: true,
@@ -65,7 +65,7 @@ const setBoard = (q) => {
     // Remove the question to avoid repeats and end the game
     q.splice(randomIndex, 1);
     console.log(q)
-    if (q.length === 0) {
+    if (state.player1 === 10 || state.player2 === 10) {
         $("#end").css("visibility", "unset")
         if (state.player1 > state.player2) {
             $("#end").append($("<h1>")).text("Player 1 Wins!").addClass("endText")
@@ -136,9 +136,11 @@ $(".chars").on("click", (event)=>{
     characters.push(event.target)
     characters.push(event.target.classList[1])
     $(event.target).css("border", "2px solid white")
+    $(".whoChoose").text("Player 2 Choose!")
     console.log(characters)
-    if (characters.length === 2) {
+    if (characters.length === 4) {
         $("#charSelect").append($("<button>").text("Play!").addClass("play"));
+        $(".whoChoose").text("Press Play!");
     }
     $(".play").on("click", ()=>{
         $(".charImg").append(characters[0]);
@@ -182,13 +184,13 @@ const p2Abil = () => {
 }
 
 $(".abil").on("click", ()=>{
-    state.player2 = state.player2 -1
+    state.player2 = state.player2 -2
     $p2score.text(state.player2)
     $(".abil").css("visibility", "hidden")
 })
 
 $(".abil2").on("click", ()=>{
-    state.player1 = state.player1 -1
+    state.player1 = state.player1 -2
     $p1score.text(state.player1)
     $(".abil2").css("visibility", "hidden")
 })
