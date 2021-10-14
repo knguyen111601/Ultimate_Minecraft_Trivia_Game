@@ -210,8 +210,13 @@ h1 {
     }
 }
 
+/* **************************************************************
+** End Screen
+************************************************************** */
+
 #end {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
     background-color: salmon;
@@ -221,9 +226,137 @@ h1 {
     justify-content: center;
     align-items: center;
     visibility: hidden;
-    
 }
 
 .endText {
-    font-size: 2em;   
+    font-size: 2em;
+    text-align: center;
+}
+
+#end img{
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    #end {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-color: salmon;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        justify-content: center;
+        align-items: end;
+        visibility: hidden;
+    }
+    
+    .endText {
+        font-size: 2em;
+        text-align: center;
+    }
+    #end img{
+        margin: auto;
+    }
+}
+
+/* **************************************************************
+** Abilities
+************************************************************** */
+
+.abil {
+    float: right;
+    max-width: 15%;
+    margin-top: -17%;
+    margin-right: 25%;
+    visibility: hidden;
+}
+
+.abil2 {
+    float: right;
+    max-width: 15%;
+    margin-top: -17%;
+    margin-right: 25%;
+    visibility: hidden;
+}
+
+.zombAbil {
+    float: right;
+    max-width: 15%;
+    margin-top: -17%;
+    margin-right: 25%;
+    visibility: hidden;
+}
+
+.zombAbil2 {
+    float: right;
+    max-width: 15%;
+    margin-top: -17%;
+    margin-right: 25%;
+    visibility: hidden;
+}
+
+.enderAbil {
+    float: right;
+    max-width: 12%;
+    margin-top: -15%;
+    margin-right: 25%;
+    visibility: hidden;
+}
+
+.enderAbil2 {
+    float: right;
+    max-width: 12%;
+    margin-top: -15%;
+    margin-right: 25%;
+    visibility: hidden;
+}
+
+
+@media screen and (max-width: 768px){
+    .abil {
+        float: right;
+        max-width: 20%;
+        margin-top: -27.5%;
+        margin-right: 15%;
+        visibility: hidden;
+    }
+    .abil2 {
+        float: right;
+        max-width: 20%;
+        margin-top: -27.5%;
+        margin-right: 15%;
+        visibility: hidden;
+    }
+
+    .zombAbil {
+        float: right;
+        max-width: 20%;
+        margin-top: -27.5%;
+        margin-right: 15%;
+        visibility: hidden;
+    }
+    .zombAbil2 {
+        float: right;
+        max-width: 20%;
+        margin-top: -27.5%;
+        margin-right: 15%;
+        visibility: hidden;
+    }
+
+    .enderAbil {
+        float: right;
+        max-width: 16%;
+        margin-top: -24.5%;
+        margin-right: 15%;
+        visibility: hidden;
+    }
+    .enderAbil2 {
+        float: right;
+        max-width: 16%;
+        margin-top: -24.5%;
+        margin-right: 15%;
+        visibility: hidden;
+    }
 }
