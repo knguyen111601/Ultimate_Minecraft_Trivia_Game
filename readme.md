@@ -28,7 +28,38 @@ My project is a trivia game based upon the popular video game, Minecraft. In thi
 
  - I did, however, find some struggle in making the components of the game outside of the trivia game part. My character selection screen was simple as I just had to give the event target to an array that would equate to what each player had chosen. However, making them have the special abilities was much more difficult as I had to create many functions and rules to get them to apply. There were a lot of if statements that were intended to find what character the player was using and how many points they had. This is because the abilities would be unlocked depending on how many points the player had. 
 
- - Making the game 
+ - Making the game indicate who's turn it was was something I struggled with for much longer than I would have liked. I spend a long time making bunch of functions but I later realized after spending some time off of it that I could just include it into the chooseAnswer function rather than try to create a whole new section. 
+```js
+const chooseAnswer = (event, question) => {
+    console.log(event)
+    if(event.target.innerText === question.answer){
+        console.log("correct")
+        if (state.which) {
+            state.player1++
+            state.which = !state.which
+            $("#player1 h3").css("color", "black")
+            $("#player2 h3").css("color", "green")
+        } else {
+            state.player2++
+            state.which = !state.which
+            $("#player2 h3").css("color", "black")
+            $("#player1 h3").css("color", "green")
+        }
+        setBoard(questions)
+    } else {
+        console.log("incorrect")
+        if (state.which) {
+            $("#player1 h3").css("color", "black")
+            $("#player2 h3").css("color", "green")
+        } else {
+            $("#player2 h3").css("color", "black")
+            $("#player1 h3").css("color", "green")
+        }
+        setBoard(questions)
+        state.which = !state.which
+    }
+}
+```
 
 ## Media Queries
 
